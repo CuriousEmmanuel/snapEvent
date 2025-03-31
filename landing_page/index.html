@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapEvent | Find Your Event Photos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Photo Background -->
+    <div class="photo-background">
+        <div class="photo-slideshow">
+            <div class="photo-slide active" style="background-image: url('https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80')"></div>
+            <div class="photo-slide" style="background-image: url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80')"></div>
+            <div class="photo-slide" style="background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80')"></div>
+        </div>
+        <div class="photo-overlay"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <i class="fas fa-camera-retro"></i> SnapEvent
+            </a>
+            <div class="nav-links">
+                <a href="#how-it-works">How It Works</a>
+                <a href="#photographers">Photographers</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#" class="btn btn-outline">Login</a>
+                <a href="#" class="btn btn-primary">Upload Photos</a>
+            </div>
+            <button class="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Relive Your <span>Special Moments</span></h1>
+                <p>Discover, purchase, and download high-quality photos from your events captured by professional photographers.</p>
+                
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" placeholder="Search by event, location, or photographer...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i> Find Photos
+                    </button>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#how-it-works" class="btn btn-primary">How It Works</a>
+                    <a href="#photographers" class="btn btn-secondary">Browse Photographers</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2>How <span>SnapEvent</span> Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Search for Your Event</h3>
+                    <p>Find photos by event name, date, location, or photographer.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h3>Preview & Select</h3>
+                    <p>Browse high-resolution previews and select your favorites.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>Purchase & Download</h3>
+                    <p>Securely checkout and download full-resolution images instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Photographers -->
+    <section class="photographers" id="photographers">
+        <div class="container">
+            <h2>Featured <span>Photographers</span></h2>
+            <div class="photographer-grid">
+                <!-- Photographer 1 -->
+                <div class="photographer-card">
+                    <div class="photographer-photo" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <h3>Alex Johnson</h3>
+                    <p class="specialty">Weddings & Portraits</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.7 (128)</span>
+                    </div>
+                    <a href="#" class="btn btn-outline">View Portfolio</a>
+                </div>
+                
+                <!-- Photographer 2 -->
+                <div class="photographer-card">
+                    <div class="photographer-photo" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <h3>Maria Garcia</h3>
+                    <p class="specialty">Corporate Events</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5.0 (94)</span>
+                    </div>
+                    <a href="#" class="btn btn-outline">View Portfolio</a>
+                </div>
+                
+                <!-- Photographer 3 -->
+                <div class="photographer-card">
+                    <div class="photographer-photo" style="background-image: url('https://images.unsplash.com/photo-1542178243-bc20204b769f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <h3>James Wilson</h3>
+                    <p class="specialty">Concerts & Festivals</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>4.2 (156)</span>
+                    </div>
+                    <a href="#" class="btn btn-outline">View Portfolio</a>
+                </div>
+            </div>
+            <div class="center-btn">
+                <a href="#" class="btn btn-primary">View All Photographers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>What Our <span>Users Say</span></h2>
+            <div class="testimonial-slider">
+                <!-- Testimonial 1 -->
+                <div class="testimonial active">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Found amazing photos from my wedding that I didn't even know existed! The quality was outstanding and the purchase process was so simple.</p>
+                    </div>
+                    <div class="user">
+                        <div class="user-photo" style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80')"></div>
+                        <div class="user-info">
+                            <h4>Sarah Thompson</h4>
+                            <p>Wedding Client</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>As a photographer, SnapEvent has helped me reach new clients and get paid fairly for my work. The platform is easy to use and the support team is fantastic.</p>
+                    </div>
+                    <div class="user">
+                        <div class="user-photo" style="background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80')"></div>
+                        <div class="user-info">
+                            <h4>Michael Chen</h4>
+                            <p>Event Photographer</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photographer CTA -->
+    <section class="photographer-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Are You a Photographer?</h2>
+                <p>Join our platform to showcase your work, reach new clients, and get paid for your talent.</p>
+                <a href="#" class="btn btn-primary">Sign Up as Photographer</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>SnapEvent</h3>
+                    <p>The premier platform connecting event photographers with their audience.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>For Clients</h3>
+                    <ul>
+                        <li><a href="#">Find Photos</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>For Photographers</h3>
+                    <ul>
+                        <li><a href="#">Join Our Team</a></li>
+                        <li><a href="#">Pricing Plans</a></li>
+                        <li><a href="#">Upload Guide</a></li>
+                        <li><a href="#">Photographer Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SnapEvent. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapEvent | Photographer Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.css">
+</head>
+<body>
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="profile-card">
+                <div class="profile-pic" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80')"></div>
+                <h3>Alex Johnson</h3>
+                <p class="bio">Professional Event Photographer</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-value">4.8</span>
+                        <span class="stat-label">Rating</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">128</span>
+                        <span class="stat-label">Events</span>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#">
+                            <i class="fas fa-th-large"></i> Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#upload-section">
+                            <i class="fas fa-cloud-upload-alt"></i> Upload Photos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#manage-section">
+                            <i class="fas fa-images"></i> Manage Photos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#events-section">
+                            <i class="fas fa-calendar-alt"></i> Events
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#proofing-section">
+                            <i class="fas fa-check-circle"></i> Proofing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#analytics-section">
+                            <i class="fas fa-chart-line"></i> Analytics
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#settings-section">
+                            <i class="fas fa-cog"></i> Settings
+                        </a>
+                    </li>
+                    <li class="logout">
+                        <a href="#">
+                            <i class="fas fa-sign-out-alt"></i> Log Out
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search photos, events, clients...">
+                </div>
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </button>
+                    <button class="quick-upload-btn">
+                        <i class="fas fa-plus"></i> Upload
+                    </button>
+                </div>
+            </header>
+
+            <!-- Dashboard Overview -->
+            <section class="dashboard-overview">
+                <h2>Dashboard Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #e3f2fd; color: #1976d2;">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>2,458</h3>
+                            <p>Photos Uploaded</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #e8f5e9; color: #388e3c;">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>$12,847</h3>
+                            <p>Total Earnings</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #fff3e0; color: #fb8c00;">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>24</h3>
+                            <p>Pending Approvals</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #f3e5f5; color: #8e24aa;">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>18,492</h3>
+                            <p>Photo Views</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <h3>Quick Actions</h3>
+                    <div class="action-buttons">
+                        <button class="action-btn">
+                            <i class="fas fa-cloud-upload-alt"></i> Upload New
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-wallet"></i> View Earnings
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-calendar-plus"></i> Create Event
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-gallery-thumbnails"></i> Manage Galleries
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="recent-activity">
+                <div class="section-header">
+                    <h2>Recent Activity</h2>
+                    <a href="#" class="view-all">View All</a>
+                </div>
+                <div class="activity-feed">
+                    <div class="activity-item">
+                        <div class="activity-icon sold">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="activity-details">
+                            <p><strong>12 photos</strong> sold to <strong>Sarah Miller</strong></p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                        <div class="activity-amount">$247</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon uploaded">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <div class="activity-details">
+                            <p>You uploaded <strong>48 new photos</strong> to <strong>Johnson Wedding</strong></p>
+                            <span class="activity-time">5 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon comment">
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <div class="activity-details">
+                            <p><strong>Michael Chen</strong> commented on 3 photos in <strong>Corporate Retreat</strong></p>
+                            <span class="activity-time">1 day ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon approval">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="activity-details">
+                            <p><strong>Lisa Wong</strong> approved 15 photos in <strong>Family Portrait</strong></p>
+                            <span class="activity-time">2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Photo Management Section -->
+            <section class="photo-management" id="manage-section">
+                <div class="section-header">
+                    <h2>Manage Photos</h2>
+                    <div class="management-actions">
+                        <div class="search-filter">
+                            <input type="text" placeholder="Filter photos...">
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <button class="bulk-action-btn">
+                            <i class="fas fa-tasks"></i> Bulk Actions
+                        </button>
+                    </div>
+                </div>
+
+                <div class="photo-filters">
+                    <div class="filter-group">
+                        <label>Sort By:</label>
+                        <select>
+                            <option>Recent</option>
+                            <option>Popular</option>
+                            <option>Best Selling</option>
+                            <option>Alphabetical</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Event:</label>
+                        <select>
+                            <option>All Events</option>
+                            <option>Johnson Wedding</option>
+                            <option>Corporate Retreat</option>
+                            <option>Family Portrait</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Status:</label>
+                        <select>
+                            <option>All Status</option>
+                            <option>Published</option>
+                            <option>Draft</option>
+                            <option>Private</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="photo-grid">
+                    <!-- Photo 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80')">
+                            <div class="photo-actions">
+                                <button class="action-btn edit"><i class="fas fa-pen"></i></button>
+                                <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                            <div class="photo-selection">
+                                <input type="checkbox" id="photo1">
+                                <label for="photo1"></label>
+                            </div>
+                        </div>
+                        <div class="photo-info">
+                            <h3>Bridal Portrait</h3>
+                            <p class="photo-event">Johnson Wedding</p>
+                            <div class="photo-stats">
+                                <span><i class="fas fa-eye"></i> 248</span>
+                                <span><i class="fas fa-shopping-cart"></i> 12</span>
+                                <span class="price">$29.99</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80')">
+                            <div class="photo-actions">
+                                <button class="action-btn edit"><i class="fas fa-pen"></i></button>
+                                <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                            <div class="photo-selection">
+                                <input type="checkbox" id="photo2">
+                                <label for="photo2"></label>
+                            </div>
+                        </div>
+                        <div class="photo-info">
+                            <h3>First Dance</h3>
+                            <p class="photo-event">Johnson Wedding</p>
+                            <div class="photo-stats">
+                                <span><i class="fas fa-eye"></i> 187</span>
+                                <span><i class="fas fa-shopping-cart"></i> 8</span>
+                                <span class="price">$24.99</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80')">
+                            <div class="photo-actions">
+                                <button class="action-btn edit"><i class="fas fa-pen"></i></button>
+                                <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                            <div class="photo-selection">
+                                <input type="checkbox" id="photo3">
+                                <label for="photo3"></label>
+                            </div>
+                        </div>
+                        <div class="photo-info">
+                            <h3>Team Photo</h3>
+                            <p class="photo-event">Corporate Retreat</p>
+                            <div class="photo-stats">
+                                <span><i class="fas fa-eye"></i> 132</span>
+                                <span><i class="fas fa-shopping-cart"></i> 5</span>
+                                <span class="price">$19.99</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 4 -->
+                    <div class="photo-card">
+                        <div class="photo-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80')">
+                            <div class="photo-actions">
+                                <button class="action-btn edit"><i class="fas fa-pen"></i></button>
+                                <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                            <div class="photo-selection">
+                                <input type="checkbox" id="photo4">
+                                <label for="photo4"></label>
+                            </div>
+                        </div>
+                        <div class="photo-info">
+                            <h3>Family Portrait</h3>
+                            <p class="photo-event">Family Session</p>
+                            <div class="photo-stats">
+                                <span><i class="fas fa-eye"></i> 98</span>
+                                <span><i class="fas fa-shopping-cart"></i> 3</span>
+                                <span class="price">$34.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn next">Next <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <!-- Upload Section -->
+            <section class="upload-section" id="upload-section">
+                <div class="section-header">
+                    <h2>Upload New Photos</h2>
+                </div>
+
+                <div class="upload-container">
+                    <div class="upload-area" id="dropZone">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Drag & Drop Photos Here</h3>
+                        <p>or</p>
+                        <button class="browse-btn">Browse Files</button>
+                        <input type="file" id="fileUpload" multiple accept="image/*" style="display: none;">
+                    </div>
+
+                    <div class="upload-progress">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Uploaded</span>
+                    </div>
+
+                    <div class="metadata-form">
+                        <h3>Photo Details</h3>
+                        <div class="form-group">
+                            <label>Event</label>
+                            <select>
+                                <option>Select Event</option>
+                                <option>Johnson Wedding</option>
+                                <option>Corporate Retreat</option>
+                                <option>Family Portrait</option>
+                                <option>New Event...</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" placeholder="Enter photo title">
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea placeholder="Add a description (optional)"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Tags</label>
+                            <input type="text" placeholder="Add tags (separate with commas)">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Pricing</label>
+                                <select>
+                                    <option>Standard ($19.99)</option>
+                                    <option>Premium ($29.99)</option>
+                                    <option>Custom...</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Visibility</label>
+                                <select>
+                                    <option>Public</option>
+                                    <option>Private</option>
+                                    <option>Client Only</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button class="save-draft-btn">Save as Draft</button>
+                            <button class="publish-btn">Publish Now</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Events Section -->
+            <section class="events-section" id="events-section">
+                <div class="section-header">
+                    <h2>Event Management</h2>
+                    <button class="create-event-btn">
+                        <i class="fas fa-plus"></i> Create New Event
+                    </button>
+                </div>
+
+                <div class="events-grid">
+                    <!-- Event 1 -->
+                    <div class="event-card">
+                        <div class="event-cover" style="background-image: url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80')">
+                            <div class="event-actions">
+                                <button class="action-btn edit"><i class="fas fa-pen"></i></button>
+                                <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="event-info">
+                            <h3>Johnson Wedding</h3>
+                            <p class="event-date">May 15, 2023</p>
+                            <div class="event-stats">
+                                <span><i class="fas fa-images"></i> 248 Photos</span>
+                                <span><i class="fas fa-shopping-cart"></i> $2,847</span>
+                            </div>
+                            <button class="manage-event-btn">Manage Event</button>
+                        </div>
+                    </div>
+
+                    <!-- Event 2 -->
+                    <div class="event-card">
+                        <div class="event-cover" style="background-image: url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80')">
+                            <div class="event-actions">
+                                <button class="action-btn edit"><i class="fas fa-pen"></i></button>
+                                <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="event-info">
+                            <h3>Corporate Retreat</h3>
+                            <p class="event-date">June 22, 2023</p>
+                            <div class="event-stats">
+                                <span><i class="fas fa-images"></i> 187 Photos</span>
+                                <span><i class="fas fa-shopping-cart"></i> $1,245</span>
+                            </div>
+                            <button class="manage-event-btn">Manage Event</button>
+                        </div>
+                    </div>
+
+                    <!-- Event 3 -->
+                    <div class="event-card">
+                        <div class="event-cover" style="background-image: url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80')">
+                            <div class="event-actions">
+                                <button class="action-btn edit"><i class="fas fa-pen"></i></button>
+                                <button class="action-btn delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="event-info">
+                            <h3>Family Portrait</h3>
+                            <p class="event-date">July 5, 2023</p>
+                            <div class="event-stats">
+                                <span><i class="fas fa-images"></i> 132 Photos</span>
+                                <span><i class="fas fa-shopping-cart"></i> $847</span>
+                            </div>
+                            <button class="manage-event-btn">Manage Event</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Analytics Section -->
+            <section class="analytics-section" id="analytics-section">
+                <div class="section-header">
+                    <h2>Sales Analytics</h2>
+                    <div class="analytics-filter">
+                        <select>
+                            <option>Last 7 Days</option>
+                            <option>Last 30 Days</option>
+                            <option>Last 90 Days</option>
+                            <option>This Year</option>
+                            <option>Custom Range</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <h3>Earnings Overview</h3>
+                        <div class="chart-container">
+                            <canvas id="earningsChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="analytics-card">
+                        <h3>Top Selling Photos</h3>
+                        <div class="top-photos-list">
+                            <div class="top-photo-item">
+                                <div class="photo-thumb" style="background-image: url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80')"></div>
+                                <div class="photo-details">
+                                    <h4>Bridal Portrait</h4>
+                                    <p>Johnson Wedding</p>
+                                </div>
+                                <div class="photo-sales">
+                                    <span class="sales-count">24 Sales</span>
+                                    <span class="sales-amount">$719.76</span>
+                                </div>
+                            </div>
+                            <div class="top-photo-item">
+                                <div class="photo-thumb" style="background-image: url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80')"></div>
+                                <div class="photo-details">
+                                    <h4>First Dance</h4>
+                                    <p>Johnson Wedding</p>
+                                </div>
+                                <div class="photo-sales">
+                                    <span class="sales-count">18 Sales</span>
+                                    <span class="sales-amount">$539.82</span>
+                                </div>
+                            </div>
+                            <div class="top-photo-item">
+                                <div class="photo-thumb" style="background-image: url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80')"></div>
+                                <div class="photo-details">
+                                    <h4>Team Photo</h4>
+                                    <p>Corporate Retreat</p>
+                                </div>
+                                <div class="photo-sales">
+                                    <span class="sales-count">15 Sales</span>
+                                    <span class="sales-amount">$299.85</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="analytics-card">
+                        <h3>Sales by Event</h3>
+                        <div class="chart-container">
+                            <canvas id="eventSalesChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="analytics-card">
+                        <h3>Recent Transactions</h3>
+                        <div class="transactions-list">
+                            <div class="transaction-item">
+                                <div class="transaction-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <h4>Sarah Miller</h4>
+                                    <p>5 Photos - Johnson Wedding</p>
+                                    <span class="transaction-time">2 hours ago</span>
+                                </div>
+                                <div class="transaction-amount">$124.95</div>
+                            </div>
+                            <div class="transaction-item">
+                                <div class="transaction-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <h4>Michael Chen</h4>
+                                    <p>3 Photos - Corporate Retreat</p>
+                                    <span class="transaction-time">5 hours ago</span>
+                                </div>
+                                <div class="transaction-amount">$74.97</div>
+                            </div>
+                            <div class="transaction-item">
+                                <div class="transaction-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="transaction-details">
+                                    <h4>Lisa Wong</h4>
+                                    <p>7 Photos - Family Portrait</p>
+                                    <span class="transaction-time">1 day ago</span>
+                                </div>
+                                <div class="transaction-amount">$174.93</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Proofing Section -->
+            <section class="proofing-section" id="proofing-section">
+                <div class="section-header">
+                    <h2>Proofing Galleries</h2>
+                    <button class="create-proofing-btn">
+                        <i class="fas fa-plus"></i> Create New Gallery
+                    </button>
+                </div>
+
+                <div class="proofing-grid">
+                    <!-- Gallery 1 -->
+                    <div class="proofing-card">
+                        <div class="proofing-cover" style="background-image: url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80')">
+                            <div class="proofing-status">
+                                <span class="status-badge pending">Pending Approval</span>
+                            </div>
+                        </div>
+                        <div class="proofing-info">
+                            <h3>Johnson Wedding</h3>
+                            <p class="client-name">For: Sarah & David Johnson</p>
+                            <div class="proofing-stats">
+                                <span><i class="fas fa-images"></i> 48 Photos</span>
+                                <span><i class="fas fa-comment"></i> 12 Comments</span>
+                            </div>
+                            <div class="proofing-actions">
+                                <button class="view-gallery-btn">View Gallery</button>
+                                <button class="send-reminder-btn">Send Reminder</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery 2 -->
+                    <div class="proofing-card">
+                        <div class="proofing-cover" style="background-image: url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80')">
+                            <div class="proofing-status">
+                                <span class="status-badge approved">Approved</span>
+                            </div>
+                        </div>
+                        <div class="proofing-info">
+                            <h3>Corporate Retreat</h3>
+                            <p class="client-name">For: TechSolutions Inc.</p>
+                            <div class="proofing-stats">
+                                <span><i class="fas fa-images"></i> 36 Photos</span>
+                                <span><i class="fas fa-shopping-cart"></i> 8 Purchased</span>
+                            </div>
+                            <div class="proofing-actions">
+                                <button class="view-gallery-btn">View Gallery</button>
+                                <button class="send-invoice-btn">Send Invoice</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery 3 -->
+                    <div class="proofing-card">
+                        <div class="proofing-cover" style="background-image: url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80')">
+                            <div class="proofing-status">
+                                <span class="status-badge completed">Completed</span>
+                            </div>
+                        </div>
+                        <div class="proofing-info">
+                            <h3>Family Portrait</h3>
+                            <p class="client-name">For: Wong Family</p>
+                            <div class="proofing-stats">
+                                <span><i class="fas fa-images"></i> 24 Photos</span>
+                                <span><i class="fas fa-shopping-cart"></i> 15 Purchased</span>
+                            </div>
+                            <div class="proofing-actions">
+                                <button class="view-gallery-btn">View Gallery</button>
+                                <button class="download-all-btn">Download All</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section class="settings-section" id="settings-section">
+                <div class="section-header">
+                    <h2>Account Settings</h2>
+                </div>
+
+                <div class="settings-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="profile">Profile</button>
+                        <button class="tab-btn" data-tab="payment">Payment</button>
+                        <button class="tab-btn" data-tab="notifications">Notifications</button>
+                        <button class="tab-btn" data-tab="security">Security</button>
+                    </div>
+
+                    <div class="tab-content active" id="profile-tab">
+                        <h3>Profile Information</h3>
+                        <div class="settings-form">
+                            <div class="form-group">
+                                <label>Profile Picture</label>
+                                <div class="profile-pic-upload">
+                                    <div class="current-pic" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80')"></div>
+                                    <div class="upload-controls">
+                                        <button class="change-pic-btn">Change Photo</button>
+                                        <p>JPG, GIF or PNG. Max size 2MB</p>
+                                        <input type="file" id="profilePicUpload" accept="image/*" style="display: none;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>First Name</label>
+                                    <input type="text" value="Alex">
+                                </div>
+                                <div class="form-group">
+                                    <label>Last Name</label>
+                                    <input type="text" value="Johnson">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" value="alex.johnson@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" value="(555) 123-4567">
+                            </div>
+                            <div class="form-group">
+                                <label>Bio</label>
+                                <textarea>Professional event photographer with 8 years of experience capturing weddings, corporate events, and portraits.</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Website</label>
+                                <input type="url" value="https://alexjohnsonphoto.com">
+                            </div>
+                            <div class="form-actions">
+                                <button class="cancel-btn">Cancel</button>
+                                <button class="save-btn">Save Changes</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="payment-tab">
+                        <h3>Payment Settings</h3>
+                        <div class="settings-form">
+                            <div class="payment-methods">
+                                <h4>Payout Methods</h4>
+                                <div class="method-card">
+                                    <div class="method-info">
+                                        <i class="fab fa-paypal"></i>
+                                        <div>
+                                            <h5>PayPal</h5>
+                                            <p>alex.johnson@example.com</p>
+                                        </div>
+                                    </div>
+                                    <button class="edit-method-btn">Edit</button>
+                                </div>
+                                <div class="method-card">
+                                    <div class="method-info">
+                                        <i class="fas fa-university"></i>
+                                        <div>
+                                            <h5>Bank Transfer</h5>
+                                            <p>**** **** **** 1234</p>
+                                        </div>
+                                    </div>
+                                    <button class="edit-method-btn">Edit</button>
+                                </div>
+                                <button class="add-method-btn">
+                                    <i class="fas fa-plus"></i> Add Payment Method
+                                </button>
+                            </div>
+                            <div class="payout-settings">
+                                <h4>Payout Preferences</h4>
+                                <div class="form-group">
+                                    <label>Payout Schedule</label>
+                                    <select>
+                                        <option>Weekly (Every Monday)</option>
+                                        <option>Bi-Weekly (1st & 15th)</option>
+                                        <option>Monthly (1st of Month)</option>
+                                        <option>Manual (On Demand)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Minimum Payout Amount</label>
+                                    <select>
+                                        <option>$50.00</option>
+                                        <option>$100.00</option>
+                                        <option>$250.00</option>
+                                        <option>$500.00</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button class="cancel-btn">Cancel</button>
+                                <button class="save-btn">Save Changes</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="notifications-tab">
+                        <h3>Notification Preferences</h3>
+                        <div class="settings-form">
+                            <div class="notification-category">
+                                <h4>Email Notifications</h4>
+                                <div class="notification-item">
+                                    <div class="notification-info">
+                                        <h5>New Sales</h5>
+                                        <p>Get notified when someone purchases your photos</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                <div class="notification-item">
+                                    <div class="notification-info">
+                                        <h5>Client Comments</h5>
+                                        <p>Get notified when clients comment on your photos</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                <div class="notification-item">
+                                    <div class="notification-info">
+                                        <h5>Gallery Approvals</h5>
+                                        <p>Get notified when clients approve proofing galleries</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="notification-category">
+                                <h4>Mobile Notifications</h4>
+                                <div class="notification-item">
+                                    <div class="notification-info">
+                                        <h5>Push Notifications</h5>
+                                        <p>Receive push notifications on your mobile device</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                <div class="notification-item">
+                                    <div class="notification-info">
+                                        <h5>SMS Alerts</h5>
+                                        <p>Receive text messages for important updates</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button class="cancel-btn">Cancel</button>
+                                <button class="save-btn">Save Changes</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="security-tab">
+                        <h3>Security Settings</h3>
+                        <div class="settings-form">
+                            <div class="security-item">
+                                <div class="security-info">
+                                    <h4>Password</h4>
+                                    <p>Last changed 3 months ago</p>
+                                </div>
+                                <button class="change-password-btn">Change Password</button>
+                            </div>
+                            <div class="security-item">
+                                <div class="security-info">
+                                    <h4>Two-Factor Authentication</h4>
+                                    <p>Add an extra layer of security to your account</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="security-item">
+                                <div class="security-info">
+                                    <h4>Active Sessions</h4>
+                                    <p>View and manage your logged-in devices</p>
+                                </div>
+                                <button class="view-sessions-btn">View Sessions</button>
+                            </div>
+                            <div class="form-actions">
+                                <button class="cancel-btn">Cancel</button>
+                                <button class="save-btn">Save Changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="dashboard-footer">
+                <div class="footer-links">
+                    <a href="#">FAQs</a>
+                    <a href="#">Help Center</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 SnapEvent. All rights reserved.</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Photo Modal -->
+    <div class="modal" id="photoModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-photo" style="background-image: url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')"></div>
+                <div class="modal-details">
+                    <h3>Bridal Portrait</h3>
+                    <p class="photo-event">Johnson Wedding - May 15, 2023</p>
+                    <div class="photo-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-eye"></i>
+                            <span>248 Views</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>12 Sales</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>$29.99</span>
+                        </div>
+                    </div>
+                    <div class="photo-description">
+                        <p>Beautiful portrait of the bride during golden hour at the Johnson wedding ceremony.</p>
+                    </div>
+                    <div class="photo-tags">
+                        <span class="tag">wedding</span>
+                        <span class="tag">bride</span>
+                        <span class="tag">portrait</span>
+                        <span class="tag">ceremony</span>
+                    </div>
+                    <div class="photo-actions">
+                        <button class="action-btn edit"><i class="fas fa-pen"></i> Edit Details</button>
+                        <button class="action-btn price"><i class="fas fa-tag"></i> Change Price</button>
+                        <button class="action-btn visibility"><i class="fas fa-eye"></i> Visibility</button>
+                        <button class="action-btn delete"><i class="fas fa-trash"></i> Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Event Modal -->
+    <div class="modal" id="eventModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-header">
+                <h2>Create New Event</h2>
+            </div>
+            <div class="modal-body">
+                <div class="event-form">
+                    <div class="form-group">
+                        <label>Event Name</label>
+                        <input type="text" placeholder="e.g. Johnson Wedding">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Event Date</label>
+                            <input type="date">
+                        </div>
+                        <div class="form-group">
+                            <label>Event Type</label>
+                            <select>
+                                <option>Wedding</option>
+                                <option>Corporate</option>
+                                <option>Portrait</option>
+                                <option>Concert</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input type="text" placeholder="Venue name or address">
+                    </div>
+                    <div class="form-group">
+                        <label>Client Name(s)</label>
+                        <input type="text" placeholder="Who is this event for?">
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea placeholder="Brief description of the event (optional)"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Default Pricing Tier</label>
+                        <select>
+                            <option>Standard ($19.99 per photo)</option>
+                            <option>Premium ($29.99 per photo)</option>
+                            <option>Custom Pricing</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Default Visibility</label>
+                        <select>
+                            <option>Public (visible to everyone)</option>
+                            <option>Private (only visible to client)</option>
+                            <option>Unlisted (only with direct link)</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button class="cancel-btn">Cancel</button>
+                        <button class="create-btn">Create Event</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
