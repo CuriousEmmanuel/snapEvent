@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoSearch | Find Your Photos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Persistent Search -->
+    <header class="search-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-camera"></i> PhotoSearch
+            </a>
+            <div class="search-container">
+                <form id="searchForm">
+                    <div class="search-bar">
+                        <input type="text" id="searchQuery" placeholder="Search by event, location, or photographer..." value="New York Wedding">
+                        <button type="submit" class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <nav class="user-actions">
+                <a href="#" class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="search-results">
+        <div class="container">
+            <!-- Filters Sidebar -->
+            <aside class="filters-sidebar">
+                <div class="filter-section">
+                    <h3>Filters</h3>
+                    <button class="clear-filters">Clear All</button>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Event Type</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" checked> Wedding
+                            <span class="count">(248)</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox"> Corporate
+                            <span class="count">(187)</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox"> Portrait
+                            <span class="count">(132)</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox"> Concert
+                            <span class="count">(98)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Location</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" checked> New York
+                            <span class="count">(148)</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox"> Los Angeles
+                            <span class="count">(87)</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox"> Chicago
+                            <span class="count">(65)</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox"> Miami
+                            <span class="count">(42)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Date Range</h4>
+                    <div class="date-range">
+                        <input type="date" id="startDate" value="2023-01-01">
+                        <span>to</span>
+                        <input type="date" id="endDate" value="2023-12-31">
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Photographer</h4>
+                    <input type="text" placeholder="Search photographers..." class="photographer-search">
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox"> Alex Johnson
+                            <span class="count">(48)</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox"> Maria Garcia
+                            <span class="count">(36)</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox"> James Wilson
+                            <span class="count">(28)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <div class="price-range">
+                        <input type="range" min="0" max="100" value="50" class="slider" id="priceRange">
+                        <div class="price-values">
+                            <span>$0</span>
+                            <span>$50+</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Results Section -->
+            <section class="results-section">
+                <div class="results-header">
+                    <h2>Search Results for "New York Wedding"</h2>
+                    <div class="results-count">1,248 photos found</div>
+                    <div class="sort-options">
+                        <label>Sort by:</label>
+                        <select id="sortBy">
+                            <option value="popular">Most Popular</option>
+                            <option value="newest">Latest Uploads</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="photo-grid" id="photoGrid">
+                    <!-- Photo 1 -->
+                    <div class="photo-card">
+                        <div class="photo-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80')">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h3>Bridal Portrait</h3>
+                                    <p>Johnson Wedding • New York</p>
+                                    <p class="photographer">Alex Johnson</p>
+                                    <p class="price">$29.99</p>
+                                </div>
+                                <button class="quick-view-btn">Quick View</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 2 -->
+                    <div class="photo-card">
+                        <div class="photo-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80')">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h3>First Dance</h3>
+                                    <p>Johnson Wedding • New York</p>
+                                    <p class="photographer">Alex Johnson</p>
+                                    <p class="price">$24.99</p>
+                                </div>
+                                <button class="quick-view-btn">Quick View</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 3 -->
+                    <div class="photo-card">
+                        <div class="photo-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80')">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h3>Ceremony</h3>
+                                    <p>Smith Wedding • New York</p>
+                                    <p class="photographer">Maria Garcia</p>
+                                    <p class="price">$34.99</p>
+                                </div>
+                                <button class="quick-view-btn">Quick View</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 4 -->
+                    <div class="photo-card">
+                        <div class="photo-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1493863641943-9b68992a8d07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80')">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h3>Reception</h3>
+                                    <p>Williams Wedding • New York</p>
+                                    <p class="photographer">James Wilson</p>
+                                    <p class="price">$19.99</p>
+                                </div>
+                                <button class="quick-view-btn">Quick View</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 5 -->
+                    <div class="photo-card">
+                        <div class="photo-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80')">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h3>Bride & Groom</h3>
+                                    <p>Johnson Wedding • New York</p>
+                                    <p class="photographer">Alex Johnson</p>
+                                    <p class="price">$39.99</p>
+                                </div>
+                                <button class="quick-view-btn">Quick View</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photo 6 -->
+                    <div class="photo-card">
+                        <div class="photo-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80')">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h3>Wedding Party</h3>
+                                    <p>Taylor Wedding • New York</p>
+                                    <p class="photographer">Sarah Lee</p>
+                                    <p class="price">$27.99</p>
+                                </div>
+                                <button class="quick-view-btn">Quick View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="loading-indicator" id="loadingIndicator">
+                    <div class="spinner"></div>
+                    <p>Loading more photos...</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="quickViewModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-photo" style="background-image: url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')"></div>
+                <div class="modal-details">
+                    <h2>Bridal Portrait</h2>
+                    <div class="photo-meta">
+                        <p><i class="fas fa-calendar-alt"></i> May 15, 2023</p>
+                        <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+                        <p><i class="fas fa-user"></i> Photographer: Alex Johnson</p>
+                    </div>
+                    <div class="photo-description">
+                        <p>Beautiful portrait of the bride during golden hour at the Johnson wedding ceremony in Central Park.</p>
+                    </div>
+                    <div class="purchase-options">
+                        <div class="price-option">
+                            <h3>Digital Download</h3>
+                            <p class="price">$29.99</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                        <div class="price-option">
+                            <h3>Print (8x10)</h3>
+                            <p class="price">$49.99</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="license-options">
+                        <h3>License Type</h3>
+                        <select>
+                            <option>Personal Use ($29.99)</option>
+                            <option>Commercial Use ($99.99)</option>
+                            <option>Extended License ($199.99)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
